@@ -11,5 +11,9 @@ Here are a few example scripts that should work pretty consitently.  My hello wo
 sudo python ./baseline.py
 
 ```
+
+## Links for reference
+  -(outdated) https://tutorials-raspberrypi.com/connect-control-raspberry-pi-ws2812-rgb-led-strips/
+  - https://github.com/rpi-ws281x/rpi-ws281x-python
 ## Author Info
 @dr3wdh
