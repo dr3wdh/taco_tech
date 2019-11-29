@@ -1,4 +1,4 @@
-# Eample Scripts
+# Example Scripts
 Here are a few example scripts that should work pretty consitently.  My hello worlds for the WS2812B strip
 ## Requirements
 |**Description**|**Command Reference**|
