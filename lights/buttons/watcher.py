@@ -70,7 +70,7 @@ while True:
                 strip.show()
 
             print("lights are dim red")
-            time.sleep(1) ## play nice with human fingers
+            time.sleep(.5) ## play nice with human fingers
 
         #-------------------------------------------------
         # if lights are already set to dim red, turn off
@@ -101,7 +101,7 @@ while True:
                 strip.show()
 
             print("lights are off")
-            time.sleep(1) ## play nice with human fingers
+            time.sleep(.5) ## play nice with human fingers
 
     elif bright_red_state == False:
         ## set request vars to equal bright red
@@ -133,8 +133,8 @@ while True:
                 strip.setPixelColor(i, Color(RED,GREEN,BLUE))
                 strip.show()
 
-            print("lights are bright white")
-            time.sleep(1) ## play nice with human fingers
+            print("lights are bright red")
+            time.sleep(.5) ## play nice with human fingers
 
         #-------------------------------------------------
         # if lights are already set to bright red, turn off
@@ -165,7 +165,7 @@ while True:
                 strip.show()
 
             print("lights are off")
-            time.sleep(1) ## play nice with human fingers
+            time.sleep(.5) ## play nice with human fingers
 
     elif dim_white_state == False:
         ## set request vars to equal dim white
@@ -197,8 +197,8 @@ while True:
                 strip.setPixelColor(i, Color(RED,GREEN,BLUE))
                 strip.show()
 
-            print("lights are bright white")
-            time.sleep(1) ## play nice with human fingers
+            print("lights are dim white")
+            time.sleep(.5) ## play nice with human fingers
 
         #-------------------------------------------------
         # if lights are already set to dim white, turn off
@@ -229,7 +229,7 @@ while True:
                 strip.show()
 
             print("lights are off")
-            time.sleep(1) ## play nice with human fingers
+            time.sleep(.5) ## play nice with human fingers
 
     elif bright_white_state == False:
         print('bright white button pressed')
@@ -261,7 +261,7 @@ while True:
                 strip.show()
 
             print("lights are bright white")
-            time.sleep(1) ## play nice with human fingers
+            time.sleep(.5) ## play nice with human fingers
 
         #-------------------------------------------------
         # if lights are already set to bright white, turn off
@@ -292,6 +292,6 @@ while True:
                 strip.show()
 
             print("lights are off")
-            time.sleep(1) ## play nice with human fingers
+            time.sleep(.5) ## play nice with human fingers
 
         time.sleep(0.2) ## don't crash pi with infinite loop
