@@ -1,4 +1,4 @@
-#comment
+LED_COUNT = 107#comment
 import RPi.GPIO as GPIO
 import time
 from rpi_ws281x import *
@@ -6,7 +6,7 @@ from rpi_ws281x import *
 ## constant LED vars that won't change based on buttons
 ## (pin and count aren't constant because of reading light future feature)
 #LED_COUNT = 149
-#LED_COUNT = 38
+#LED_COUNT = 107
 #LED_PIN = 18
 LED_FREQ_HZ = 800000
 LED_DMA = 10
@@ -58,7 +58,7 @@ while True:
             STATE_B = BLUE
 
             ## full length vars
-            LED_COUNT = 38
+            LED_COUNT = 107
             LED_PIN = 18
 
             ## activate lights
@@ -83,7 +83,7 @@ while True:
             BLUE = 0
 
             ## full length vars
-            LED_COUNT = 38
+            LED_COUNT = 107
             LED_PIN = 18
 
             ## save state vars that equal off
@@ -122,7 +122,7 @@ while True:
             STATE_B = BLUE
 
             ## full length vars
-            LED_COUNT = 38
+            LED_COUNT = 107
             LED_PIN = 18
 
             ## activate lights
@@ -147,7 +147,7 @@ while True:
             BLUE = 0
 
             ## full length vars
-            LED_COUNT = 38
+            LED_COUNT = 107
             LED_PIN = 18
 
             ## save state vars that equal off
@@ -186,7 +186,7 @@ while True:
             STATE_B = BLUE
 
             ## full length vars
-            LED_COUNT = 38
+            LED_COUNT = 107
             LED_PIN = 18
 
             ## activate lights
@@ -211,7 +211,7 @@ while True:
             BLUE = 0
 
             ## full length vars
-            LED_COUNT = 38
+            LED_COUNT = 107
             LED_PIN = 18
 
             ## save state vars that equal off
@@ -249,7 +249,7 @@ while True:
             STATE_B = BLUE
 
             ## full length vars
-            LED_COUNT = 38
+            LED_COUNT = 107
             LED_PIN = 18
 
             ## activate lights
@@ -274,7 +274,7 @@ while True:
             BLUE = 0
 
             ## full length vars
-            LED_COUNT = 38
+            LED_COUNT = 107
             LED_PIN = 18
 
             ## save state vars that equal off
