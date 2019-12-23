@@ -12,7 +12,8 @@ LED_FREQ_HZ = 800000
 LED_DMA = 10
 #LED_BRIGHTNESS = 255
 LED_INVERT = False
-LED_CHANNEL = 0
+LED_CHANNEL_A = 0
+LED_CHANNEL_B = 1
 
 ## instantiate state save vars (used for turning off on double press)
 STATE_BR = 0
@@ -58,16 +59,25 @@ while True:
             STATE_B = BLUE
 
             ## full length vars
-            LED_COUNT = 107
-            LED_PIN = 18
+            LED_COUNT = 106
+            LED_PIN_A = 18
+            LED_PIN_B = 19
 
-            ## activate lights
-            strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL)
-            strip.begin()
+
+            ## activate light strip A
+            strip_a = Adafruit_NeoPixel(LED_COUNT, LED_PIN_A, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_A)
+            strip_a.begin()
 
             for i in range (0, LED_COUNT):
-                strip.setPixelColor(i, Color(RED,GREEN,BLUE))
-                strip.show()
+                strip_a.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_a.show()
+
+            strip_b = Adafruit_NeoPixel(LED_COUNT, LED_PIN_B, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_B)
+            strip_b.begin()
+
+            for i in range (0, LED_COUNT):
+                strip_b.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_b.show()
 
             print("lights are dim red")
             time.sleep(.5) ## play nice with human fingers
