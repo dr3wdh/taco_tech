@@ -8,6 +8,8 @@ from rpi_ws281x import *
 #LED_COUNT = 149
 #LED_COUNT = 107
 #LED_PIN = 18
+LED_PIN_A = 18
+LED_PIN_B = 19
 LED_FREQ_HZ = 800000
 LED_DMA = 10
 #LED_BRIGHTNESS = 255
@@ -61,11 +63,8 @@ while True:
 
             ## full length vars
             LED_COUNT = 106
-            LED_PIN_A = 18
-            LED_PIN_B = 19
 
-
-            ## activate light strip A
+            ## activate lights
             strip_a = Adafruit_NeoPixel(LED_COUNT, LED_PIN_A, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_A)
             strip_a.begin()
 
@@ -94,8 +93,7 @@ while True:
             BLUE = 0
 
             ## full length vars
-            LED_COUNT = 107
-            LED_PIN = 18
+            LED_COUNT = 106
 
             ## save state vars that equal off
             STATE_BR = BRIGHT
@@ -104,12 +102,19 @@ while True:
             STATE_B = BLUE
 
             ## activate lights
-            strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL)
-            strip.begin()
+            strip_a = Adafruit_NeoPixel(LED_COUNT, LED_PIN_A, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_A)
+            strip_a.begin()
 
             for i in range (0, LED_COUNT):
-                strip.setPixelColor(i, Color(RED, GREEN, BLUE))
-                strip.show()
+                strip_a.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_a.show()
+
+            strip_b = Adafruit_NeoPixel(LED_COUNT, LED_PIN_B, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_B)
+            strip_b.begin()
+
+            for i in range (0, LED_COUNT):
+                strip_b.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_b.show()
 
             print("lights are off")
             time.sleep(.5) ## play nice with human fingers
@@ -133,16 +138,22 @@ while True:
             STATE_B = BLUE
 
             ## full length vars
-            LED_COUNT = 107
-            LED_PIN = 18
+            LED_COUNT = 106
 
             ## activate lights
-            strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL)
-            strip.begin()
+            strip_a = Adafruit_NeoPixel(LED_COUNT, LED_PIN_A, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_A)
+            strip_a.begin()
 
             for i in range (0, LED_COUNT):
-                strip.setPixelColor(i, Color(RED,GREEN,BLUE))
-                strip.show()
+                strip_a.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_a.show()
+
+            strip_b = Adafruit_NeoPixel(LED_COUNT, LED_PIN_B, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_B)
+            strip_b.begin()
+
+            for i in range (0, LED_COUNT):
+                strip_b.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_b.show()
 
             print("lights are bright red")
             time.sleep(.5) ## play nice with human fingers
@@ -158,8 +169,7 @@ while True:
             BLUE = 0
 
             ## full length vars
-            LED_COUNT = 107
-            LED_PIN = 18
+            LED_COUNT = 106
 
             ## save state vars that equal off
             STATE_BR = BRIGHT
@@ -168,12 +178,19 @@ while True:
             STATE_B = BLUE
 
             ## activate lights
-            strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL)
-            strip.begin()
+            strip_a = Adafruit_NeoPixel(LED_COUNT, LED_PIN_A, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_A)
+            strip_a.begin()
 
             for i in range (0, LED_COUNT):
-                strip.setPixelColor(i, Color(RED, GREEN, BLUE))
-                strip.show()
+                strip_a.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_a.show()
+
+            strip_b = Adafruit_NeoPixel(LED_COUNT, LED_PIN_B, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_B)
+            strip_b.begin()
+
+            for i in range (0, LED_COUNT):
+                strip_b.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_b.show()
 
             print("lights are off")
             time.sleep(.5) ## play nice with human fingers
@@ -197,16 +214,22 @@ while True:
             STATE_B = BLUE
 
             ## full length vars
-            LED_COUNT = 107
-            LED_PIN = 18
+            LED_COUNT = 106
 
             ## activate lights
-            strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL)
-            strip.begin()
+            strip_a = Adafruit_NeoPixel(LED_COUNT, LED_PIN_A, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_A)
+            strip_a.begin()
 
             for i in range (0, LED_COUNT):
-                strip.setPixelColor(i, Color(RED,GREEN,BLUE))
-                strip.show()
+                strip_a.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_a.show()
+
+            strip_b = Adafruit_NeoPixel(LED_COUNT, LED_PIN_B, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_B)
+            strip_b.begin()
+
+            for i in range (0, LED_COUNT):
+                strip_b.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_b.show()
 
             print("lights are dim white")
             time.sleep(.5) ## play nice with human fingers
@@ -222,8 +245,7 @@ while True:
             BLUE = 0
 
             ## full length vars
-            LED_COUNT = 107
-            LED_PIN = 18
+            LED_COUNT = 106
 
             ## save state vars that equal off
             STATE_BR = BRIGHT
@@ -232,12 +254,19 @@ while True:
             STATE_B = BLUE
 
             ## activate lights
-            strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL)
-            strip.begin()
+            strip_a = Adafruit_NeoPixel(LED_COUNT, LED_PIN_A, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_A)
+            strip_a.begin()
 
             for i in range (0, LED_COUNT):
-                strip.setPixelColor(i, Color(RED, GREEN, BLUE))
-                strip.show()
+                strip_a.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_a.show()
+
+            strip_b = Adafruit_NeoPixel(LED_COUNT, LED_PIN_B, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_B)
+            strip_b.begin()
+
+            for i in range (0, LED_COUNT):
+                strip_b.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_b.show()
 
             print("lights are off")
             time.sleep(.5) ## play nice with human fingers
@@ -260,16 +289,22 @@ while True:
             STATE_B = BLUE
 
             ## full length vars
-            LED_COUNT = 107
-            LED_PIN = 18
+            LED_COUNT = 106
 
             ## activate lights
-            strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL)
-            strip.begin()
+            strip_a = Adafruit_NeoPixel(LED_COUNT, LED_PIN_A, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_A)
+            strip_a.begin()
 
             for i in range (0, LED_COUNT):
-                strip.setPixelColor(i, Color(RED,GREEN,BLUE))
-                strip.show()
+                strip_a.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_a.show()
+
+            strip_b = Adafruit_NeoPixel(LED_COUNT, LED_PIN_B, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_B)
+            strip_b.begin()
+
+            for i in range (0, LED_COUNT):
+                strip_b.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_b.show()
 
             print("lights are bright white")
             time.sleep(.5) ## play nice with human fingers
@@ -285,8 +320,7 @@ while True:
             BLUE = 0
 
             ## full length vars
-            LED_COUNT = 107
-            LED_PIN = 18
+            LED_COUNT = 106
 
             ## save state vars that equal off
             STATE_BR = BRIGHT
@@ -295,12 +329,19 @@ while True:
             STATE_B = BLUE
 
             ## activate lights
-            strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL)
-            strip.begin()
+            strip_a = Adafruit_NeoPixel(LED_COUNT, LED_PIN_A, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_A)
+            strip_a.begin()
 
             for i in range (0, LED_COUNT):
-                strip.setPixelColor(i, Color(RED, GREEN, BLUE))
-                strip.show()
+                strip_a.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_a.show()
+
+            strip_b = Adafruit_NeoPixel(LED_COUNT, LED_PIN_B, LED_FREQ_HZ, LED_DMA, LED_INVERT, BRIGHT, LED_CHANNEL_B)
+            strip_b.begin()
+
+            for i in range (0, LED_COUNT):
+                strip_b.setPixelColor(i, Color(RED,GREEN,BLUE))
+                strip_b.show()
 
             print("lights are off")
             time.sleep(.5) ## play nice with human fingers
